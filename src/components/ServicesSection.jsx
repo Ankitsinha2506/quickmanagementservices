@@ -1,23 +1,26 @@
 import { motion } from "framer-motion";
+import BusinessConsulting from "../assets/Service/businessconsulting.jpg";
+import FinancialPlanning from "../assets/Service/financialplanning.jpg";
+import MarketAnalysis from "../assets/Service/marketanalysis.webp";
 
 const servicesData = [
   {
     id: 1,
     title: "Business Consulting",
     description: "Expert strategies to streamline operations, boost growth, and stay ahead in today’s competitive market.",
-    image: "/assets/Service/Business Consulting.jpg",
+    image: BusinessConsulting,
   },
   {
     id: 2,
     title: "Financial Planning",
     description: "Smart financial roadmaps designed to optimize resources, reduce risks, and maximize profitability.",
-    image: "/assets/Service/Financial Planning.jpg",
+    image: FinancialPlanning,
   },
   {
     id: 3,
     title: "Market Analysis",
     description: "Comprehensive market insights that identify opportunities and give your business a winning edge.",
-    image: "/assets/Service/Market Analysis.webp",
+    image: MarketAnalysis,
   },
 ];
 

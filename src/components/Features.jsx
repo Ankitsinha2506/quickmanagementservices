@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import {
-    FaLaptopCode,
-    FaCloud,
-    FaShieldAlt,
-    FaChartLine,
-    FaMobileAlt,
-    FaUsers,
-    FaCog,
-    FaHeadset
-  } from "react-icons/fa";
+  FaChartLine,
+  FaCloud,
+  FaCog,
+  FaHeadset,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaShieldAlt,
+  FaUsers
+} from "react-icons/fa";
   
 
 const features = [
@@ -114,7 +114,7 @@ const Features = () => {
           {features.map((feature, i) => (
             <motion.div
               key={i}
-              className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 cursor-pointer"
+              className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-left transition-transform duration-300 cursor-pointer"
               variants={cardVariants}
               whileHover={{ scale: 1.08, rotate: 1 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}

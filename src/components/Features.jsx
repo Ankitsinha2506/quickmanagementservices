@@ -1,54 +1,59 @@
 import { motion } from "framer-motion";
 import {
-  FaLaptopCode, FaCloud, FaShieldAlt, FaChartLine,
-  FaMobileAlt, FaUsers, FaCog, FaHeadset
+  FaChartLine,
+  FaCloud,
+  FaCog,
+  FaHeadset,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaShieldAlt,
+  FaUsers,
 } from "react-icons/fa";
-import ElectricBorder from './ui/ElectricBorder/ElectricBorder'; 
+
 const features = [
   {
-    icon: <FaLaptopCode size={30} className="text-blue-500" />,
+    icon: <FaLaptopCode size={30} className="text-blue-600" />,
     title: "Custom Software Development",
     desc: "Tailored solutions to meet your specific business needs. Agile development ensures fast delivery and flexibility, with scalable applications for long-term growth.",
   },
   {
-    icon: <FaCloud size={30} className="text-blue-500" />,
+    icon: <FaCloud size={30} className="text-blue-600" />,
     title: "Cloud Services & Management",
-    desc: "Comprehensive cloud solutions including strategy, migration, deployment, and ongoing management. Optimize costs, ensure high availability, and leverage multi-cloud or hybrid environments with expert monitoring and security.",
+    desc: "Comprehensive cloud solutions including strategy, migration, deployment, and ongoing management with expert monitoring and cost optimization.",
   },
   {
-    icon: <FaShieldAlt size={30} className="text-blue-500" />,
+    icon: <FaShieldAlt size={30} className="text-blue-600" />,
     title: "Cybersecurity & Compliance",
-    desc: "Protect your systems and sensitive data from cyber threats. Regular audits and compliance with industry standards using advanced security protocols.",
+    desc: "Protect your systems and sensitive data from cyber threats through regular audits, compliance checks, and advanced security protocols.",
   },
   {
-    icon: <FaChartLine size={30} className="text-blue-500" />,
+    icon: <FaChartLine size={30} className="text-blue-600" />,
     title: "Data Analytics & BI",
-    desc: "Transform raw data into strategic assets using advanced analytics, machine learning, and business intelligence tools. Create interactive dashboards, perform predictive modeling, and empower data-driven decision making across your enterprise.",
+    desc: "Transform raw data into insights using analytics, AI, and BI tools. Empower your teams with data-driven decision-making.",
   },
   {
-    icon: <FaCog size={30} className="text-blue-500" />,
+    icon: <FaCog size={30} className="text-blue-600" />,
     title: "DevOps & Automation",
-    desc: "Accelerate development lifecycles and improve product quality with end-to-end DevOps solutions. Automate CI/CD pipelines, infrastructure provisioning, testing, and deployment processes using cutting-edge tools and best practices.",
+    desc: "Accelerate your development lifecycle with CI/CD automation, infrastructure provisioning, and efficient deployment processes.",
   },
   {
-    icon: <FaMobileAlt size={30} className="text-blue-500" />,
+    icon: <FaMobileAlt size={30} className="text-blue-600" />,
     title: "Mobile & Web Applications",
-    desc: "Design and develop high-performance, user-centric mobile and web applications. Use the latest frameworks and technologies to ensure responsive, accessible apps that deliver seamless experiences across devices.",
+    desc: "Design and develop high-performance, user-centric mobile and web apps with responsive and seamless experiences across devices.",
   },
   {
-    icon: <FaUsers size={30} className="text-blue-500" />,
+    icon: <FaUsers size={30} className="text-blue-600" />,
     title: "IT Consulting & Strategy",
-    desc: "Leverage expert IT consulting to define and execute technology roadmaps aligned with business goals. Optimize IT investments, embrace digital transformation, and foster innovation to gain a competitive advantage.",
+    desc: "Define and execute a technology roadmap aligned with your business goals. Optimize IT investments and embrace digital transformation.",
   },
   {
-    icon: <FaHeadset size={30} className="text-blue-500" />,
+    icon: <FaHeadset size={30} className="text-blue-600" />,
     title: "24/7 Support & Maintenance",
-    desc: "Round-the-clock technical support with regular updates, patching, and performance monitoring to minimize downtime and ensure business continuity.",
+    desc: "Round-the-clock technical support with proactive monitoring, updates, and performance optimization for business continuity.",
   },
 ];
 
-
-// Animation Variants for framer-motion
+// Animation Variants
 const containerVariants = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { staggerChildren: 0.2 } },
@@ -62,31 +67,30 @@ const cardVariants = {
 const Features = () => {
   return (
     <section className="relative py-20 bg-gray-50 overflow-hidden">
-      {/* Background Blobs */}
+      {/* Animated Background Blobs (Soft Professional Style) */}
       <motion.div
-        className="absolute w-96 h-96 bg-blue-200 rounded-full opacity-20 top-[-50px] left-[-50px] blur-3xl"
-        animate={{ y: [0, 30, 0], x: [0, 20, 0] }}
+        className="absolute w-80 h-80 bg-blue-200 rounded-full opacity-20 top-[-50px] left-[-50px] blur-3xl"
+        animate={{ y: [0, 25, 0], x: [0, 15, 0] }}
         transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute w-96 h-96 bg-purple-200 rounded-full opacity-20 bottom-[-50px] right-[-50px] blur-3xl"
-        animate={{ y: [0, -30, 0], x: [0, -20, 0] }}
+        className="absolute w-80 h-80 bg-indigo-200 rounded-full opacity-20 bottom-[-50px] right-[-50px] blur-3xl"
+        animate={{ y: [0, -25, 0], x: [0, -15, 0] }}
         transition={{ repeat: Infinity, duration: 14, ease: "easeInOut" }}
       />
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Title */}
+        {/* Section Title */}
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-4"
+          className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Our Features
+          Our Core Features
         </motion.h2>
 
-        {/* Subtitle */}
         <motion.p
           className="text-gray-600 text-center mb-12 text-lg md:text-xl"
           initial={{ opacity: 0, y: 20 }}
@@ -94,10 +98,10 @@ const Features = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Discover what makes us stand out in delivering exceptional IT solutions
+          Discover what makes Quick Management Services stand out in delivering exceptional IT solutions.
         </motion.p>
 
-        {/* Feature Cards Grid with Glowing ElectricBorder Animation */}
+        {/* Features Grid */}
         <motion.div
           className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
@@ -106,26 +110,20 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {features.map((feature, i) => (
-            // --- **START: ElectricBorder wrapping each card** change --
-            <ElectricBorder
+            <motion.div
               key={i}
-              color="#7df9ff"
-              speed={1}
-              chaos={0.5}
-              thickness={2}
-              style={{ borderRadius: 16 }}
+              className="bg-white border border-gray-100 hover:border-blue-200 p-8 rounded-2xl shadow-md hover:shadow-xl flex flex-col items-center text-center transition-all duration-300 cursor-pointer hover:bg-gradient-to-b from-white to-blue-50"
+              variants={cardVariants}
+              whileHover={{ y: -8 }}
             >
-              <motion.div
-                className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 cursor-pointer relative z-10"
-                variants={cardVariants}
-                whileHover={{ scale: 1.08, rotate: 1 }}
-                transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              >
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-500 text-sm md:text-base">{feature.desc}</p>
-              </motion.div>
-            </ElectricBorder>
+              <div className="mb-5 p-3 bg-blue-100 rounded-full">{feature.icon}</div>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                {feature.desc}
+              </p>
+            </motion.div>
           ))}
         </motion.div>
       </div>

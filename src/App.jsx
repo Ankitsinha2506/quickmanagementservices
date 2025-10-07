@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import ServiceDetails from "./components/ServiceDetails";
 // If your header file is Header.jsx
 
 
@@ -25,6 +26,8 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/services/:id" element={<ServiceDetails />} />
+
           </Routes>
         </main>
 

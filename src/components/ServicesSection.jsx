@@ -3,23 +3,54 @@ import { motion } from "framer-motion";
 const servicesData = [
   {
     id: 1,
-    title: "Business Consulting",
-    description: "Expert strategies to streamline operations, boost growth, and stay ahead in today’s competitive market.",
-    image: "/assets/Service/Business Consulting.jpg",
+    title: "IT Consulting",
+    description: "Strategic IT planning and advisory services that align technology investments with your business goals, improve efficiency, and drive digital transformation.",
+    image: "https://i.pinimg.com/1200x/4a/2c/88/4a2c8848704a58a5df346cc19e25593a.jpg",
   },
   {
     id: 2,
-    title: "Financial Planning",
-    description: "Smart financial roadmaps designed to optimize resources, reduce risks, and maximize profitability.",
-    image: "/assets/Service/Financial Planning.jpg",
+    title: "Cloud Solutions & Migration",
+    description: "Comprehensive cloud strategy, migration, and management services to optimize scalability, reduce costs, and enhance data accessibility across platforms like AWS, Azure, and Google Cloud.",
+    image: "https://i.pinimg.com/736x/ef/76/c9/ef76c963cfcaefc87bcbd2c89ec83417.jpg",
   },
   {
     id: 3,
-    title: "Market Analysis",
-    description: "Comprehensive market insights that identify opportunities and give your business a winning edge.",
-    image: "/assets/Service/Market Analysis.webp",
+    title: "Cybersecurity & Network Protection",
+    description: "Robust cybersecurity solutions including threat detection, firewall implementation, vulnerability assessments, and network security to protect your critical data and infrastructure.",
+    image: "https://i.pinimg.com/1200x/da/5a/5f/da5a5fabbae6b78453d5687b1f817d09.jpg",
   },
+  {
+    id: 4,
+    title: "Managed IT Services",
+    description: "Proactive monitoring, IT support, infrastructure management, and maintenance to ensure seamless business operations with minimized downtime and faster issue resolution.",
+    image: "https://i.pinimg.com/736x/ac/db/49/acdb4981cb44c215fc3c358e51fee26e.jpg",
+  },
+  {
+    id: 5,
+    title: "Software Development & Modernization",
+    description: "Custom software application development, legacy system modernization, and integration services to enhance functionality, security, and user experience.",
+    image: "https://i.pinimg.com/736x/cf/f4/46/cff4462d4e344a686bcab3cf0dbb91f2.jpg",
+  },
+  {
+    id: 6,
+    title: "Data & Analytics",
+    description: "Data strategy, advanced analytics, and business intelligence solutions that empower data-driven decision-making and unlock actionable insights.",
+    image: "https://i.pinimg.com/1200x/1e/95/30/1e9530694cfcc1d368a95d2b3056f69d.jpg",
+  },
+  {
+    id: 7,
+    title: "IT Infrastructure Management",
+    description: "End-to-end management of IT hardware, servers, networks, and cloud infrastructure to ensure high availability, performance, and scalability.",
+    image: "https://i.pinimg.com/1200x/5d/46/76/5d46761d4f358e389108f2d6fe1eff80.jpg",
+  },
+  {
+    id: 8,
+    title: "IT Support & Helpdesk",
+    description: "Comprehensive technical support and troubleshooting services to quickly address IT issues, helping your teams stay productive and focused.",
+    image: "https://i.pinimg.com/736x/6d/64/80/6d6480289cfd2355a43f2544c9443702.jpg",
+  }
 ];
+
 
 const ServicesSection = () => {
   return (

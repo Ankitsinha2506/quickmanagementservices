@@ -1,12 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import LiquidEther from "./ui/Liquid/LiquidEther";
 
 const ContactHero = () => {
   return (
     <section className="relative w-full h-screen bg-white text-gray-900 overflow-hidden flex items-center justify-center">
+      
       {/* Background Liquid Animation */}
       <LiquidEther
-        colors={['#A3A3FF', '#FFE4F1', '#D6CCFF']} // lighter/pastel colors for white background
+        colors={['#A3A3FF', '#FFE4F1', '#D6CCFF']} // pastel colors for white bg
         mouseForce={20}
         cursorSize={100}
         isViscous={false}
@@ -23,16 +25,26 @@ const ContactHero = () => {
         autoRampDuration={0.6}
       />
 
-      {/* Hero Content */}
-      <div className="absolute text-center text-gray-900 px-4 max-w-xl">
-        <h1 className="text-4xl md:text-5xl font-bold">Connect With Us Today</h1>
+      {/* Foreground Content */}
+      <div className="absolute text-center text-gray-900 px-4 max-w-xl z-10">
+        {/* 🖤 Updated Headline */}
+        <h1 className="text-4xl md:text-5xl font-bold">
+          Get in Touch
+        </h1>
+
+        {/* 🖤 Updated Subheadline */}
         <p className="mt-4 text-lg md:text-2xl">
-          We're here to help you achieve your business goals. <br />
-          Reach out to discuss your IT solutions and start your journey toward success.
+          Have questions or a project in mind? Our team at Quick Management Services Pvt Ltd 
+          is ready to help you.
         </p>
-        <button className="mt-6 border border-gray-900 text-gray-900 px-8 py-3 rounded-full font-medium text-lg hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-md">
+
+        {/* 🖤 Updated CTA */}
+        <NavLink
+          to="/contact"
+          className="mt-6 inline-block border border-gray-900 text-gray-900 px-8 py-3 rounded-full font-medium text-lg hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-md"
+        >
           Contact Us
-        </button>
+        </NavLink>
       </div>
     </section>
   );

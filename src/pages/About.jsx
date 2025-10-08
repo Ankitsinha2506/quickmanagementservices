@@ -1,3 +1,4 @@
+import React from "react";
 import AboutHero from "../components/AboutHero";
 import StorySection from "../components/StorySection";
 import MethodologyCard from "../components/MethodologyCard";
@@ -37,11 +38,13 @@ const About = () => {
     { name: "Neha Patel", role: "Marketing Specialist", img: teamImg },
   ];
 
-  const storyParagraphs = [
-    "Quick Management Services was founded in 2010 with a simple mission: to help businesses achieve their full potential through expert management solutions.",
-    "What started as a small consulting firm has grown into a comprehensive management services company serving clients across multiple industries.",
-    "Our team of experienced professionals brings diverse expertise in business strategy, financial management, operations, and market analysis to deliver tailored solutions that drive results.",
-  ];
+  // Helper to clone icon and add color + size
+  const colorizeIcon = (icon) =>
+    React.cloneElement(icon, {
+      color: "#2563EB", // Tailwind's blue-600 hex
+      size: 48,
+      className: "mb-4 mx-auto",
+    });
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
@@ -49,43 +52,55 @@ const About = () => {
       <AboutHero />
 
       {/* Our Story */}
-      <StorySection title="Our Story" paragraphs={storyParagraphs} img={img} />
+      <StorySection title="Our Story" paragraphs={[
+        "Quick Management Services was founded in 2010 with a simple mission: to help businesses achieve their full potential through expert management solutions.",
+        "What started as a small consulting firm has grown into a comprehensive management services company serving clients across multiple industries.",
+        "Our team of experienced professionals brings diverse expertise in business strategy, financial management, operations, and market analysis to deliver tailored solutions that drive results.",
+      ]} img={img} />
 
       {/* Methodology Section */}
-      <section className="py-20">
-        <div className="container mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">How We Work</h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">Our approach ensures consistent results.</p>
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto text-center mb-16 px-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-gray-100">
+            How We Work
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-xl mx-auto">
+            Our approach ensures consistent results.
+          </p>
         </div>
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
           {methodology.map((item, i) => (
             <MethodologyCard
               key={i}
-              icon={item.icon}
+              icon={colorizeIcon(item.icon)}
               title={item.title}
               desc={item.desc}
               delay={i * 0.2}
-              className="hover:scale-105 hover:shadow-xl transition-transform duration-300"
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
           ))}
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-800">
-        <div className="container mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Values</h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">Principles that guide everything we do.</p>
+      <section className="py-20 bg-gradient-to-tr from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800">
+        <div className="container mx-auto text-center mb-12 px-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-800 dark:text-blue-300">
+            Our Values
+          </h2>
+          <p className="text-blue-600 dark:text-blue-400 text-lg max-w-xl mx-auto">
+            Principles that guide everything we do.
+          </p>
         </div>
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
           {values.map((val, i) => (
             <ValueCard
               key={i}
-              icon={val.icon}
+              icon={colorizeIcon(val.icon)}
               title={val.title}
               desc={val.desc}
               delay={i * 0.2}
-              className="bg-white/20 backdrop-blur-md rounded-xl p-6 shadow-lg hover:scale-105 hover:rotate-1 transition-transform duration-300"
+              className="bg-white shadow-lg rounded-xl p-8 hover:shadow-2xl hover:scale-105 hover:rotate-1 transition-transform duration-300 cursor-pointer text-center"
             />
           ))}
         </div>
@@ -96,11 +111,15 @@ const About = () => {
 
       {/* Team Section */}
       <section className="py-20">
-        <div className="container mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">Meet the experts behind Quick Management Services</p>
+        <div className="container mx-auto text-center mb-12 px-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Our Team
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-xl mx-auto">
+            Meet the experts behind Quick Management Services
+          </p>
         </div>
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6">
           {team.map((member, i) => (
             <TeamCard
               key={i}
@@ -108,7 +127,7 @@ const About = () => {
               role={member.role}
               img={member.img}
               delay={i * 0.2}
-              className="rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300"
+              className="rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
           ))}
         </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/Logo/QMSSMallLogo.png";
+import logo from "../assets/Logo/QMSSmallLogo.png";
 import GooeyNav from "./ui/GooeyNav/GooeyNav";
 
 const Navbar = () => {
